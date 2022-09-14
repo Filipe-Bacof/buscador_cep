@@ -4,26 +4,22 @@ import './styles.css';
 import api from './services/api';
 
 function App() {
-
   const [input, setInput] = useState('')
-
+  const [cep, setCep] = useState({});
   async function handleSearch () {
-    // 93230495/json/
-
     if (input === '') {
       alert("Preencha algum CEP");
       return;
     }
-
     try{
       const response = await api.get(`${input}/json`);
-      console.log(response);
+      setCep(response.data)
+      setInput("");
     }catch{
       alert("ERRO AO BUSCAR");
+      setInput("");
     }
-
   }
-
   return (
     <div className="container">
       <h1 className="title">Buscador de CEP</h1>
@@ -38,14 +34,15 @@ function App() {
           <FiSearch size={25} color="#FFF"/>
         </button>
       </div>
-
-      <main className='main'>
-        <h2>CEP: 93222-222</h2>
-        <span>Rua da sua mãe</span>
-        <span>Complemento prostibulo</span>
-        <span>Ipiranga</span>
-        <span>Sapucaia do Sul - RS</span>
-      </main>
+      {Object.keys(cep).length > 0 && (
+        <main className='main'>
+          <h2>CEP: {cep.cep}</h2>
+          <span>Logradouro: {cep.logradouro}</span>
+          <span>Complemento: {cep.complemento}</span>
+          <span>Bairro: {cep.bairro}</span>
+          <span>Localidade: {cep.localidade} - {cep.uf}</span>
+        </main>
+      )}
     </div>
   );
 }
