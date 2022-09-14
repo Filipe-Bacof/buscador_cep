@@ -1,12 +1,12 @@
-### Project Zip Code Finder
+# Project Zip Code Finder
 
-# Made with React.JS
+### Made with React.JS
 
-# API that was used:
+### API that was used:
 https://viacep.com.br/ws/XXXXXX/json/
 put your zip code in the place where the XXX is
 
-Thanks SUJEITO PROGRAMADOR for teaching how to use it!
+### Thanks SUJEITO PROGRAMADOR for teaching how to use it!
 https://www.youtube.com/c/Sujeitoprogramador
 
 
