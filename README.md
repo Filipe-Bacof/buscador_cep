@@ -1,3 +1,18 @@
+### Project Zip Code Finder
+
+# Made with React.JS
+
+# API that was used:
+https://viacep.com.br/ws/XXXXXX/json/
+put your zip code in the place where the XXX is
+
+Thanks SUJEITO PROGRAMADOR for teaching how to use it!
+https://www.youtube.com/c/Sujeitoprogramador
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
